@@ -20,6 +20,8 @@ Plugin 'tpope/vim-surround'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 " Future adds: snippets, 
 
@@ -117,6 +119,10 @@ vnoremap <right> <nop>
         set background=dark
         colorscheme solarized
     endif
+
+    " Airline status bar
+    " make airline appear right away
+    set laststatus=2
     "=====================================================================
     " }}}
     " {{{ Search Options

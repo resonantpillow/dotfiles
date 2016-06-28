@@ -1,6 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/Users/mjensen/Envs'
-let g:netrw_dirhist_2='/Users/mjensen'
-let g:netrw_dirhist_3='/Users'
-let g:netrw_dirhist_4='/'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/Users/mjensen/dotfiles/vim/bundle/vim-airline-themes/autoload/airline/themes'
