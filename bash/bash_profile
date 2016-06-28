@@ -1,0 +1,11 @@
+
+# Set Default Editor
+#-------------------------------------------------------------------------
+export EDITOR=/usr/local/bin/vim
+export PROJECT_HOME=/Users/mjensen/Projects
+
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
+
