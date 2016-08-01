@@ -1,5 +1,6 @@
 "Indicates that vimrc is incompatible with vi and wont be used
 set nocompatible
+set encoding=utf-8
 
 " {{{ Setup Vundle and Plugins
 "=====================================================================
@@ -22,6 +23,8 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'fatih/vim-go'
 
 " Future adds: snippets, 
 
@@ -104,15 +107,14 @@ vnoremap <right> <nop>
     set showmatch
 
     set list
-    set listchars=eol:¬
+    set listchars=tab:▸\ ,eol:¬
+
 
     " Highlight lines exceeding 79 characters to encourage readibility.
     " the augroup is used because otherwise this only works for the first
     " file in a given buffer. From blog.ezyang.com/2010/03/vim-textwidth/
-    augroup vimrc_autocmds
-        autocmd BufEnter * highlight OverLength ctermbg=darkgrey guibg=#592929
-        autocmd BufEnter * match OverLength /\%>80v.\+/
-    augroup END    
+    set colorcolumn=81
+    highlight ColorColumn ctermbg=23 guibg=darkgrey
 
     " Set the Colorscheme
     if has('gui_running')
@@ -123,6 +125,9 @@ vnoremap <right> <nop>
     " Airline status bar
     " make airline appear right away
     set laststatus=2
+    
+    "make the airline toolbar use the powerline fonts
+    let g:airline_powerline_fonts = 1
     "=====================================================================
     " }}}
     " {{{ Search Options

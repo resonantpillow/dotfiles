@@ -1,11 +1,19 @@
 
 # Set Default Editor
 #-------------------------------------------------------------------------
+# Set the default editor to vim
 export EDITOR=/usr/local/bin/vim
+
+# Set up the virutal environment variables and autocompletions
 export PROJECT_HOME=/Users/mjensen/Projects
+export WORKON_HOME=~/Envs
+source /usr/local/bin/virtualenvwrapper.sh
 
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
-
+# go
+export GOROOT=/usr/local/opt/go/libexec
+export GOPATH=$HOME/dotfiles/go
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
