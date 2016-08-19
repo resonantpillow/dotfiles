@@ -47,8 +47,9 @@ call vundle#end()
 "     setlocal shiftwidth=4
 "     setlocal softtabstop=4
 
-filetype plugin on
-filetype indent on
+" Enable syntax highlighting
+syntax on
+filetype plugin indent on
 
 " Remap jj to mean esc in insert mode to make it easier to return to nmode
 inoremap jj <ESC>
@@ -97,9 +98,6 @@ vnoremap <right> <nop>
 " }}}
     " {{{ Appearance
     "=====================================================================
-    " Enable syntax highlighting
-    syntax enable
-
     " Highlight the cursor line 
     set cursorline
 
@@ -128,6 +126,7 @@ vnoremap <right> <nop>
     
     "make the airline toolbar use the powerline fonts
     let g:airline_powerline_fonts = 1
+
     "=====================================================================
     " }}}
     " {{{ Search Options
